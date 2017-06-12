@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE5C8B0C1EEE883300D91E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5C8B0B1EEE883300D91E02 /* main.m */; };
+		AE5C8B0F1EEE883300D91E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5C8B0E1EEE883300D91E02 /* AppDelegate.m */; };
+		AE5C8B151EEE883300D91E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5C8B131EEE883300D91E02 /* Main.storyboard */; };
+		AE5C8B171EEE883300D91E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5C8B161EEE883300D91E02 /* Assets.xcassets */; };
+		AE5C8B1A1EEE883300D91E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5C8B181EEE883300D91E02 /* LaunchScreen.storyboard */; };
+		AE5C8B231EEE886400D91E02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5C8B221EEE886400D91E02 /* UIKit.framework */; };
+		AE5C8B251EEE886E00D91E02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5C8B241EEE886E00D91E02 /* CoreGraphics.framework */; };
+		AE5C8B271EEE887800D91E02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5C8B261EEE887800D91E02 /* Foundation.framework */; };
+		AEBA16471EEE9E5700424CF8 /* AuthWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16341EEE9E5700424CF8 /* AuthWebVC.m */; };
+		AEBA16481EEE9E5700424CF8 /* ChatTV.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16361EEE9E5700424CF8 /* ChatTV.m */; };
+		AEBA16491EEE9E5700424CF8 /* FriendFullInfoTV.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16381EEE9E5700424CF8 /* FriendFullInfoTV.m */; };
+		AEBA164A1EEE9E5700424CF8 /* FriendsListCV.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA163A1EEE9E5700424CF8 /* FriendsListCV.m */; };
+		AEBA164B1EEE9E5700424CF8 /* VKApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA163D1EEE9E5700424CF8 /* VKApiManager.m */; };
+		AEBA164C1EEE9E5700424CF8 /* ChatReceivingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */; };
+		AEBA164D1EEE9E5700424CF8 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16421EEE9E5700424CF8 /* Friend.m */; };
+		AEBA164E1EEE9E5700424CF8 /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */; };
+		AEBA164F1EEE9E5700424CF8 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16461EEE9E5700424CF8 /* Message.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE5C8B071EEE883300D91E02 /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5C8B0B1EEE883300D91E02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE5C8B0D1EEE883300D91E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE5C8B0E1EEE883300D91E02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE5C8B141EEE883300D91E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE5C8B161EEE883300D91E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE5C8B191EEE883300D91E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE5C8B1B1EEE883300D91E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE5C8B221EEE886400D91E02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AE5C8B241EEE886E00D91E02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AE5C8B261EEE887800D91E02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEBA16331EEE9E5700424CF8 /* AuthWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthWebVC.h; sourceTree = "<group>"; };
+		AEBA16341EEE9E5700424CF8 /* AuthWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthWebVC.m; sourceTree = "<group>"; };
+		AEBA16351EEE9E5700424CF8 /* ChatTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTV.h; sourceTree = "<group>"; };
+		AEBA16361EEE9E5700424CF8 /* ChatTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTV.m; sourceTree = "<group>"; };
+		AEBA16371EEE9E5700424CF8 /* FriendFullInfoTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFullInfoTV.h; sourceTree = "<group>"; };
+		AEBA16381EEE9E5700424CF8 /* FriendFullInfoTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFullInfoTV.m; sourceTree = "<group>"; };
+		AEBA16391EEE9E5700424CF8 /* FriendsListCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCV.h; sourceTree = "<group>"; };
+		AEBA163A1EEE9E5700424CF8 /* FriendsListCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCV.m; sourceTree = "<group>"; };
+		AEBA163C1EEE9E5700424CF8 /* VKApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKApiManager.h; sourceTree = "<group>"; };
+		AEBA163D1EEE9E5700424CF8 /* VKApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKApiManager.m; sourceTree = "<group>"; };
+		AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatReceivingCell.h; sourceTree = "<group>"; };
+		AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatReceivingCell.m; sourceTree = "<group>"; };
+		AEBA16411EEE9E5700424CF8 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		AEBA16421EEE9E5700424CF8 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		AEBA16431EEE9E5700424CF8 /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
+		AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
+		AEBA16451EEE9E5700424CF8 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		AEBA16461EEE9E5700424CF8 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE5C8B041EEE883300D91E02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE5C8B271EEE887800D91E02 /* Foundation.framework in Frameworks */,
+				AE5C8B251EEE886E00D91E02 /* CoreGraphics.framework in Frameworks */,
+				AE5C8B231EEE886400D91E02 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE5C8AFE1EEE883300D91E02 = {
+			isa = PBXGroup;
+			children = (
+				AE5C8B091EEE883300D91E02 /* VKApp */,
+				AE5C8B081EEE883300D91E02 /* Products */,
+				AE5C8B211EEE886300D91E02 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE5C8B081EEE883300D91E02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C8B071EEE883300D91E02 /* VKApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE5C8B091EEE883300D91E02 /* VKApp */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA16321EEE9E5700424CF8 /* Views */,
+				AEBA163B1EEE9E5700424CF8 /* Controllers */,
+				AEBA163E1EEE9E5700424CF8 /* Models */,
+				AE5C8B0D1EEE883300D91E02 /* AppDelegate.h */,
+				AE5C8B0E1EEE883300D91E02 /* AppDelegate.m */,
+				AE5C8B131EEE883300D91E02 /* Main.storyboard */,
+				AE5C8B161EEE883300D91E02 /* Assets.xcassets */,
+				AE5C8B181EEE883300D91E02 /* LaunchScreen.storyboard */,
+				AE5C8B1B1EEE883300D91E02 /* Info.plist */,
+				AE5C8B0A1EEE883300D91E02 /* Supporting Files */,
+			);
+			path = VKApp;
+			sourceTree = "<group>";
+		};
+		AE5C8B0A1EEE883300D91E02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C8B0B1EEE883300D91E02 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE5C8B211EEE886300D91E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C8B261EEE887800D91E02 /* Foundation.framework */,
+				AE5C8B241EEE886E00D91E02 /* CoreGraphics.framework */,
+				AE5C8B221EEE886400D91E02 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEBA16321EEE9E5700424CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA16331EEE9E5700424CF8 /* AuthWebVC.h */,
+				AEBA16341EEE9E5700424CF8 /* AuthWebVC.m */,
+				AEBA16351EEE9E5700424CF8 /* ChatTV.h */,
+				AEBA16361EEE9E5700424CF8 /* ChatTV.m */,
+				AEBA16371EEE9E5700424CF8 /* FriendFullInfoTV.h */,
+				AEBA16381EEE9E5700424CF8 /* FriendFullInfoTV.m */,
+				AEBA16391EEE9E5700424CF8 /* FriendsListCV.h */,
+				AEBA163A1EEE9E5700424CF8 /* FriendsListCV.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AEBA163B1EEE9E5700424CF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA163C1EEE9E5700424CF8 /* VKApiManager.h */,
+				AEBA163D1EEE9E5700424CF8 /* VKApiManager.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AEBA163E1EEE9E5700424CF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */,
+				AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */,
+				AEBA16411EEE9E5700424CF8 /* Friend.h */,
+				AEBA16421EEE9E5700424CF8 /* Friend.m */,
+				AEBA16431EEE9E5700424CF8 /* FriendsListCell.h */,
+				AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */,
+				AEBA16451EEE9E5700424CF8 /* Message.h */,
+				AEBA16461EEE9E5700424CF8 /* Message.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE5C8B061EEE883300D91E02 /* VKApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE5C8B1E1EEE883300D91E02 /* Build configuration list for PBXNativeTarget "VKApp" */;
+			buildPhases = (
+				AE5C8B031EEE883300D91E02 /* Sources */,
+				AE5C8B041EEE883300D91E02 /* Frameworks */,
+				AE5C8B051EEE883300D91E02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKApp;
+			productName = VKApp;
+			productReference = AE5C8B071EEE883300D91E02 /* VKApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE5C8AFF1EEE883300D91E02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Abdushev Sergey";
+				TargetAttributes = {
+					AE5C8B061EEE883300D91E02 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AE5C8B021EEE883300D91E02 /* Build configuration list for PBXProject "VKApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE5C8AFE1EEE883300D91E02;
+			productRefGroup = AE5C8B081EEE883300D91E02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE5C8B061EEE883300D91E02 /* VKApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE5C8B051EEE883300D91E02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE5C8B1A1EEE883300D91E02 /* LaunchScreen.storyboard in Resources */,
+				AE5C8B171EEE883300D91E02 /* Assets.xcassets in Resources */,
+				AE5C8B151EEE883300D91E02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE5C8B031EEE883300D91E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBA164A1EEE9E5700424CF8 /* FriendsListCV.m in Sources */,
+				AEBA16491EEE9E5700424CF8 /* FriendFullInfoTV.m in Sources */,
+				AEBA164C1EEE9E5700424CF8 /* ChatReceivingCell.m in Sources */,
+				AEBA164D1EEE9E5700424CF8 /* Friend.m in Sources */,
+				AEBA16471EEE9E5700424CF8 /* AuthWebVC.m in Sources */,
+				AEBA16481EEE9E5700424CF8 /* ChatTV.m in Sources */,
+				AE5C8B0F1EEE883300D91E02 /* AppDelegate.m in Sources */,
+				AEBA164B1EEE9E5700424CF8 /* VKApiManager.m in Sources */,
+				AE5C8B0C1EEE883300D91E02 /* main.m in Sources */,
+				AEBA164F1EEE9E5700424CF8 /* Message.m in Sources */,
+				AEBA164E1EEE9E5700424CF8 /* FriendsListCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE5C8B131EEE883300D91E02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE5C8B141EEE883300D91E02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE5C8B181EEE883300D91E02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE5C8B191EEE883300D91E02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE5C8B1C1EEE883300D91E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE5C8B1D1EEE883300D91E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE5C8B1F1EEE883300D91E02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VKApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ASR.VKApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AE5C8B201EEE883300D91E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VKApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ASR.VKApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE5C8B021EEE883300D91E02 /* Build configuration list for PBXProject "VKApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE5C8B1C1EEE883300D91E02 /* Debug */,
+				AE5C8B1D1EEE883300D91E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE5C8B1E1EEE883300D91E02 /* Build configuration list for PBXNativeTarget "VKApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE5C8B1F1EEE883300D91E02 /* Debug */,
+				AE5C8B201EEE883300D91E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE5C8AFF1EEE883300D91E02 /* Project object */;
+}
