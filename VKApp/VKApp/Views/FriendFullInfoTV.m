@@ -15,15 +15,15 @@
 //
 
 #import "FriendFullInfoTV.h"
-#import "TVCell.h"
+#import "FriendFullInfoCell.h"
 #import "ChatTV.h"
-#import "VKApiManager.h"
 #import "Message.h"
+#import "VKApiManager.h"
 
 @interface FriendFullInfoTV () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *fullInfoTVC;
-@property (strong, nonatomic) TVCell *tvCell;
+@property (strong, nonatomic) FriendFullInfoCell *tvCell;
 @property (strong, nonatomic) Message *message;
 @property (strong, nonatomic) NSArray *arrayOfMessages;
 @property (strong, nonatomic) NSArray *arrayOfIndicators;
@@ -52,9 +52,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == 0) {
         static NSString *fullInfoImageCellIdentifier = @"fullInfoImageCell";
-        TVCell *cVCell = (TVCell *)[tableView dequeueReusableCellWithIdentifier:fullInfoImageCellIdentifier forIndexPath:indexPath];
-        cVCell.avatarImageTVC.image = self.avatarImageTV;
-        return cVCell;
+        FriendFullInfoCell *friendCell = (FriendFullInfoCell *)[tableView dequeueReusableCellWithIdentifier:fullInfoImageCellIdentifier forIndexPath:indexPath];
+        friendCell.avatarImageTVC.image = self.avatarImageTV;
+        return friendCell;
     } else {
         static NSString *fullInfoLabelCell = @"fullInfoLabelCell";
         UITableViewCell *cellWithLabel = [tableView dequeueReusableCellWithIdentifier:

@@ -14,6 +14,6 @@
 
 @interface FriendsListCV : UIViewController <UIWebViewDelegate>
 
-@property (strong, nonatomic) NSArray *friendsInfoArray;
+@property (strong, nonatomic) NSArray *arrayOfFriends;
 
 @end

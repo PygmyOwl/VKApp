@@ -74,6 +74,7 @@
         Friend *newFriend = [[Friend alloc] initWithDictionary:friendDictionary];
         [friendsClassesList addObject:newFriend];
     }
+    NSLog(@"FILLED %@", friendsClassesList);
     return friendsClassesList;
 }
 

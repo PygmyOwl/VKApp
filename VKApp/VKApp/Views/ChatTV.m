@@ -10,13 +10,11 @@
 #import "ChatReceivingCell.h"
 #import "VKApiManager.h"
 #import "Message.h"
-#import "PersonFullInfoTV.h"
 
 @interface ChatTV () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) Message *message;
 @property (strong, nonatomic) ChatReceivingCell *rCell;
-@property (strong, nonatomic) PersonFullInfoTV *person;
 @property (strong, nonatomic) NSArray *arrayOfMessagesWithInfo;
 @property (strong, nonatomic) IBOutlet UITextField *messageTextField;
 @property (strong, nonatomic) IBOutlet UITableView *chatTV;

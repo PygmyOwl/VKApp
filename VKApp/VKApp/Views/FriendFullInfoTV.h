@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @class ChatTV;
 @class Message;
+@class FriendFullInfoCell;
 
 @interface FriendFullInfoTV : UIViewController
 

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 @class ChatReceivingCell;
 @class AuthWebView;
-@class PersonFullInfoTV;
 
 @interface ChatTV : UIViewController
 

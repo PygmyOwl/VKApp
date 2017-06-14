@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIWebView *authWebView;
 
 @property (strong, nonatomic) VKApiManager *VKApi;
+@property (strong, nonatomic) FriendsListCV *friendList;
+@property (strong, nonatomic) UIAlertController *downloadingMessage;
 @property (assign, nonatomic) NSInteger methodIndicator;
 @property (strong, nonatomic) NSString *authURL;
 @property (strong, nonatomic) NSString *userAccessToken;
@@ -28,10 +30,7 @@
 
 - (void)viewDidLoad {
     [self getAuth];
-}
-
-- (IBAction)toCV:(id)sender {
-    [self initSegueBackToPersonsInfo];
+    [self.activityIndicator startAnimating];
 }
 
 - (void)getAuth {
@@ -65,7 +64,7 @@
                                              message:@"Check your internet connection"
                                              preferredStyle:UIAlertControllerStyleAlert];
             [errorAlert addAction:
-             [UIAlertAction actionWithTitle:@"Send"
+             [UIAlertAction actionWithTitle:@"Ok"
                                       style:UIAlertActionStyleDefault
                                     handler:^(UIAlertAction *action){}]];
             [self presentViewController:errorAlert animated:YES completion:nil];
@@ -88,6 +87,12 @@
 - (void)getFriendsInfo {
     NSURLRequest *getFriendsInfoRequest = [[VKApiManager sharedInstance]getFriendsInfoRequest:self.userAccessToken];
     [self.authWebView loadRequest:getFriendsInfoRequest];
+    [self.view setHidden:YES];
+    self.downloadingMessage = [UIAlertController
+                                     alertControllerWithTitle:@"Loading"
+                                     message:@"Getting a list of your friends, please wait."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:self.downloadingMessage animated:YES completion:nil];
     self.methodIndicator = 2;
 }
 
@@ -109,7 +114,6 @@ shouldStartLoadWithRequest:(nonnull NSURLRequest *)request
     self.activityIndicator = [[UIActivityIndicatorView alloc]
                               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.activityIndicator.center = self.view.center;
-    [self.activityIndicator startAnimating];
     [self.view addSubview:self.activityIndicator];
 }
 
@@ -117,14 +121,16 @@ shouldStartLoadWithRequest:(nonnull NSURLRequest *)request
     [self performSegueWithIdentifier:@"toFriendsList" sender:self];
 }
 
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString *currentURL = webView.request.URL.absoluteString;
+    [self.activityIndicator stopAnimating];
     NSLog(@"CURRENTURL %@", currentURL);
     if(self.methodIndicator == 1) {
         [self parseAuthData:currentURL];
     } else if(self.methodIndicator == 2) {
+        NSLog(@"working");
         [self parseFriendsInfo:currentURL];
-        [self.activityIndicator stopAnimating];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initSegueBackToPersonsInfo) name:@"ready" object:nil];
     }
 }
@@ -145,6 +151,7 @@ shouldStartLoadWithRequest:(nonnull NSURLRequest *)request
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.downloadingMessage dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

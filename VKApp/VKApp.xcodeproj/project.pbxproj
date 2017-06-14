@@ -24,6 +24,7 @@
 		AEBA164D1EEE9E5700424CF8 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16421EEE9E5700424CF8 /* Friend.m */; };
 		AEBA164E1EEE9E5700424CF8 /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */; };
 		AEBA164F1EEE9E5700424CF8 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA16461EEE9E5700424CF8 /* Message.m */; };
+		AEE7AC621EEEB2CC001A0470 /* FriendFullInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE7AC611EEEB2CC001A0470 /* FriendFullInfoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,14 +49,16 @@
 		AEBA163A1EEE9E5700424CF8 /* FriendsListCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCV.m; sourceTree = "<group>"; };
 		AEBA163C1EEE9E5700424CF8 /* VKApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKApiManager.h; sourceTree = "<group>"; };
 		AEBA163D1EEE9E5700424CF8 /* VKApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKApiManager.m; sourceTree = "<group>"; };
-		AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatReceivingCell.h; sourceTree = "<group>"; };
-		AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatReceivingCell.m; sourceTree = "<group>"; };
-		AEBA16411EEE9E5700424CF8 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
-		AEBA16421EEE9E5700424CF8 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
-		AEBA16431EEE9E5700424CF8 /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
-		AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
-		AEBA16451EEE9E5700424CF8 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		AEBA16461EEE9E5700424CF8 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatReceivingCell.h; path = ../Models/ChatReceivingCell.h; sourceTree = "<group>"; };
+		AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatReceivingCell.m; path = ../Models/ChatReceivingCell.m; sourceTree = "<group>"; };
+		AEBA16411EEE9E5700424CF8 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = ../Models/Friend.h; sourceTree = "<group>"; };
+		AEBA16421EEE9E5700424CF8 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = ../Models/Friend.m; sourceTree = "<group>"; };
+		AEBA16431EEE9E5700424CF8 /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListCell.h; path = ../Models/FriendsListCell.h; sourceTree = "<group>"; };
+		AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListCell.m; path = ../Models/FriendsListCell.m; sourceTree = "<group>"; };
+		AEBA16451EEE9E5700424CF8 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../Models/Message.h; sourceTree = "<group>"; };
+		AEBA16461EEE9E5700424CF8 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../Models/Message.m; sourceTree = "<group>"; };
+		AEE7AC601EEEB2CC001A0470 /* FriendFullInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendFullInfoCell.h; path = ../Models/FriendFullInfoCell.h; sourceTree = "<group>"; };
+		AEE7AC611EEEB2CC001A0470 /* FriendFullInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendFullInfoCell.m; path = ../Models/FriendFullInfoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +95,8 @@
 		AE5C8B091EEE883300D91E02 /* VKApp */ = {
 			isa = PBXGroup;
 			children = (
-				AEBA16321EEE9E5700424CF8 /* Views */,
-				AEBA163B1EEE9E5700424CF8 /* Controllers */,
-				AEBA163E1EEE9E5700424CF8 /* Models */,
+				AEBA16321EEE9E5700424CF8 /* ViewControllers */,
+				AEBA163B1EEE9E5700424CF8 /* Model */,
 				AE5C8B0D1EEE883300D91E02 /* AppDelegate.h */,
 				AE5C8B0E1EEE883300D91E02 /* AppDelegate.m */,
 				AE5C8B131EEE883300D91E02 /* Main.storyboard */,
@@ -124,43 +126,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AEBA16321EEE9E5700424CF8 /* Views */ = {
+		AEBA16321EEE9E5700424CF8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				AEBA16331EEE9E5700424CF8 /* AuthWebVC.h */,
 				AEBA16341EEE9E5700424CF8 /* AuthWebVC.m */,
-				AEBA16351EEE9E5700424CF8 /* ChatTV.h */,
-				AEBA16361EEE9E5700424CF8 /* ChatTV.m */,
-				AEBA16371EEE9E5700424CF8 /* FriendFullInfoTV.h */,
-				AEBA16381EEE9E5700424CF8 /* FriendFullInfoTV.m */,
 				AEBA16391EEE9E5700424CF8 /* FriendsListCV.h */,
 				AEBA163A1EEE9E5700424CF8 /* FriendsListCV.m */,
+				AEBA16371EEE9E5700424CF8 /* FriendFullInfoTV.h */,
+				AEBA16381EEE9E5700424CF8 /* FriendFullInfoTV.m */,
+				AEBA16351EEE9E5700424CF8 /* ChatTV.h */,
+				AEBA16361EEE9E5700424CF8 /* ChatTV.m */,
 			);
+			name = ViewControllers;
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AEBA163B1EEE9E5700424CF8 /* Controllers */ = {
+		AEBA163B1EEE9E5700424CF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AEBA163C1EEE9E5700424CF8 /* VKApiManager.h */,
 				AEBA163D1EEE9E5700424CF8 /* VKApiManager.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		AEBA163E1EEE9E5700424CF8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */,
-				AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */,
 				AEBA16411EEE9E5700424CF8 /* Friend.h */,
 				AEBA16421EEE9E5700424CF8 /* Friend.m */,
 				AEBA16431EEE9E5700424CF8 /* FriendsListCell.h */,
 				AEBA16441EEE9E5700424CF8 /* FriendsListCell.m */,
+				AEE7AC601EEEB2CC001A0470 /* FriendFullInfoCell.h */,
+				AEE7AC611EEEB2CC001A0470 /* FriendFullInfoCell.m */,
 				AEBA16451EEE9E5700424CF8 /* Message.h */,
 				AEBA16461EEE9E5700424CF8 /* Message.m */,
+				AEBA163F1EEE9E5700424CF8 /* ChatReceivingCell.h */,
+				AEBA16401EEE9E5700424CF8 /* ChatReceivingCell.m */,
 			);
-			path = Models;
+			name = Model;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +235,7 @@
 			files = (
 				AEBA164A1EEE9E5700424CF8 /* FriendsListCV.m in Sources */,
 				AEBA16491EEE9E5700424CF8 /* FriendFullInfoTV.m in Sources */,
+				AEE7AC621EEEB2CC001A0470 /* FriendFullInfoCell.m in Sources */,
 				AEBA164C1EEE9E5700424CF8 /* ChatReceivingCell.m in Sources */,
 				AEBA164D1EEE9E5700424CF8 /* Friend.m in Sources */,
 				AEBA16471EEE9E5700424CF8 /* AuthWebVC.m in Sources */,

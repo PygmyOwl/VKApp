@@ -23,10 +23,10 @@
 
 @interface FriendsListCV () <UICollectionViewDataSource, UICollectionViewDelegate, UIWebViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *friendInfoCVC;
+@property (strong, nonatomic) IBOutlet UICollectionView *friendsListCV;
 @property (strong, nonatomic) Friend *friend;
 @property (strong, nonatomic) AuthWebVC  *authView;
-@property (strong, nonatomic) FriendsListCV *cvCell;
+@property (strong, nonatomic) FriendsListCell *flCell;
 @property (strong, nonatomic) NSArray *convertWebData;
 @property (strong, nonatomic) NSMutableDictionary *friendsFullInfo;
 @property (strong, nonatomic) NSMutableArray *fullInfoToTV;
@@ -36,24 +36,27 @@
 @property (strong, nonatomic) NSString *accessTokenVC;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
 @property (strong, nonatomic) NSArray *searchingResults;
-@property (assign, nonatomic) BOOL searсhingArrayIsFilled;
+@property (assign, nonatomic) BOOL searchingDataIsFound;
 
 @end
 
 @implementation FriendsListCV
 
 - (NSArray *)initializeWebData {
-    self.authView = [[AuthWebVC alloc] init];
     NSArray *webData = [NSArray arrayWithArray:[[VKApiManager sharedInstance] friendClassFilledWithInfo]];
+    NSLog(@"COLL %@", webData);
     return webData;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(self.searсhingArrayIsFilled == NO) {
+    if(self.searchingDataIsFound == NO) {
+        self.convertWebData = [self initializeWebData];
+    NSLog(@"convert %@", self.convertWebData);
+    } else if(self.searchingDataIsFound == YES) {
         self.convertWebData = [self initializeWebData];
     }
-    [[self.cvCell cvCellActivityIndicator] startAnimating];
+    [[self.flCell cvCellActivityIndicator] startAnimating];
 }
 
 - (void)setNavigationBackButton {
@@ -67,16 +70,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if(self.searсhingArrayIsFilled == YES) {
+    if(self.searchingDataIsFound == YES) {
         self.convertWebData = self.searchingResults;
     }
-    [self.personsInfoCVC reloadData];
+    [self.friendsListCV reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[self.cvCell cvCellActivityIndicator] stopAnimating];
-    [self.personsInfoCVC reloadData];
+    [[self.flCell cvCellActivityIndicator] stopAnimating];
+    [self.friendsListCV reloadData];
 }
 
 - (UIImage *)loadImage:(NSIndexPath *) indexPath {
@@ -94,12 +97,35 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CVCell *cVCell = (CVCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CVcell" forIndexPath:indexPath];
-    cVCell.personAvatarImage.image = [self loadImage:indexPath];
-    cVCell.firstNameLabel.text = self.friend.firstName;
-    cVCell.lastNameLabel.text  = self.friend.lastName;
-    cVCell.positionLabel.text  = self.friend.nickName;
-    return cVCell;
+    FriendsListCell *flCell = (FriendsListCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CVcell" forIndexPath:indexPath];
+    flCell.personAvatarImage.image = [self loadImage:indexPath];
+    flCell.firstNameLabel.text = self.friend.firstName;
+    flCell.lastNameLabel.text  = self.friend.lastName;
+    flCell.nickNameLabel.text  = self.friend.nickName;
+    return flCell;
+}
+
+#pragma mark segueMethods
+
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.avatarImage = [self loadImage:indexPath];
+    [self prepareDataForTransfer:indexPath];
+    [self performSegueWithIdentifier:@"fromCVtoTVSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"fromCVtoTVSegue"]) {
+        FriendFullInfoTV *friendInfo = segue.destinationViewController;
+        friendInfo.avatarImageTV   = self.bigAvatarImage;
+        friendInfo.fullInfoArrayTV = self.fullInfoToTV;
+        friendInfo.friendIDTV = self.friendIDCV;
+    }
+}
+
+- (void)prepareDataForTransfer:(NSIndexPath *)indexPath {
+    NSDictionary *chosenDict = self.convertWebData[indexPath.row];
+    [self prepareArrayForTransfer:chosenDict];
 }
 
 - (void)prepareArrayForTransfer:(NSDictionary *)chosenDict {
@@ -134,33 +160,22 @@
     }
 }
 
-- (void)prepareDataForTransfer:(NSIndexPath *)indexPath {
-    NSDictionary *chosenDict = self.convertWebData[indexPath.row];
-    [self prepareArrayForTransfer:chosenDict];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView
-didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.avatarImage = [self loadImage:indexPath];
-    [self prepareDataForTransfer:indexPath];
-    [self performSegueWithIdentifier:@"fromCVtoTVSegue" sender:self];
-}
-
 #pragma mark search
 
 - (IBAction)searchActionButton:(id)sender {
-    NSString *searchRequest = self.searchTextField.text;
+    NSString *searchRequest = [self.searchTextField.text lowercaseString];
     NSLog(@"search %@", searchRequest);
     NSDictionary *chosenDict = [NSDictionary new];
     NSMutableArray *foundDicts = [NSMutableArray new];
     for(int i = 0; i < self.convertWebData.count; i++) {
         self.friend = self.convertWebData[i];
-        if([self.friend.firstName isEqual:searchRequest]) {
+        if([[self.friend.firstName lowercaseString] isEqual:searchRequest]) {
             NSLog(@"find firstName %@", self.friend.firstName);
             chosenDict = self.convertWebData[i];
             [foundDicts addObject:chosenDict];
             [self reloadFoundedInfo:foundDicts];
-        } else if([self.friend.lastName isEqual:searchRequest]) {
+            NSLog(@"founded %@", foundDicts);
+        } else if([[self.friend.lastName lowercaseString] isEqual:searchRequest]) {
             chosenDict = self.convertWebData[i];
             [foundDicts addObject:chosenDict];
             [self reloadFoundedInfo:foundDicts];
@@ -171,19 +186,10 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (void)reloadFoundedInfo:(NSArray *)foundedDicts {
-    [self.personsInfoCVC clearsContextBeforeDrawing];
-    self.searсhingArrayIsFilled = YES;
+    [self.friendsListCV clearsContextBeforeDrawing];
+    self.searchingDataIsFound = YES;
     self.searchingResults = [NSArray arrayWithArray:foundedDicts];
-    [self.personsInfoCVC reloadData];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"fromCVtoTVSegue"]) {
-        FriendFullInfoTV *friendInfo = segue.destinationViewController;
-        friendInfo.avatarImageTV   = self.bigAvatarImage;
-        friendInfo.fullInfoArrayTV = self.fullInfoToTV;
-        friendInfo.friendIDTV = self.friendIDCV;
-    }
+    [self.friendsListCV reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
